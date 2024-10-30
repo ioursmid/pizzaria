@@ -1,0 +1,107 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título */
+h4 {
+    color: #b71c1c;
+    margin-top: 30px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 1.8em;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para cada item de borda */
+.borda-item, .pizza-item, .lanche-item, .adicional-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f3e7; /* Fundo claro similar ao dos lanches */
+    border: 1px solid #d35400; /* Borda destacada */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.borda-item:hover, .pizza-item:hover, .lanche-item:hover, .adicional-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.borda-item h5, .pizza-item h5, .lanche-item h5, .adicional-item h5 {
+    color: #d35400; /* Cor de destaque */
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.borda-item p, .pizza-item p, .lanche-item p, .adicional-item p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Botão para adicionar ao carrinho */
+.add-cart-btn {
+    background-color: #d35400; /* Cor do botão similar ao padrão dos lanches */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart-btn:hover {
+    background-color: #e67e22; /* Cor de hover do botão */
+    transform: scale(1.05);
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .borda-item, .pizza-item, .lanche-item, .adicional-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .add-cart-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h4 {
+        font-size: 1.5em;
+    }
+
+    .borda-item h5, .pizza-item h5, .lanche-item h5, .adicional-item h5 {
+        font-size: 1.1em;
+    }
+
+    .add-cart-btn {
+        font-size: 0.9em;
+    }
+}

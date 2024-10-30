@@ -1,0 +1,266 @@
+/* Estilos de Background */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Transparente com Efeito de Rolagem */
+.nav-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-wrapper:hover,
+.nav-wrapper.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Logo da Marca */
+.brand-logo {
+    font-family: 'Dancing Script', cursive;
+    color: #ffcc00;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícone do Carrinho */
+.cart-icon {
+    position: relative;
+    color: #ffcc00;
+    transition: color 0.3s;
+}
+
+.cart-icon:hover {
+    color: #ffdd66;
+}
+
+.cart-icon i {
+    font-size: 1.5em;
+}
+
+/* Badge do Carrinho */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ff6f00;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Título Principal */
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d32f2f;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 120px 0 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu de Categorias */
+.menu-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.menu-category a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #d32f2f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.menu-category a:hover {
+    background-color: #ffebcd;
+    transform: scale(1.05);
+    color: #b71c1c;
+}
+
+.menu-category a i {
+    font-size: 2em;
+    color: #d32f2f;
+    margin-bottom: 8px;
+}
+
+/* Modal do Carrinho */
+#cart-modal .modal-content {
+    padding: 20px;
+    background-color: #fff5e1;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #5d4037;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-align: right;
+    color: #d32f2f;
+}
+
+/* Botão Remover do Carrinho */
+.remove-btn {
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebd5d;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.developer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.developer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.developer a:hover {
+    color: #ffdd66;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .brand-logo {
+        font-size: 1.5em;
+    }
+
+    .menu-category a {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9em;
+    }
+
+    .cart-icon i {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-category {
+        gap: 10px;
+    }
+
+    .menu-category a {
+        width: 90px;
+        height: 90px;
+    }
+
+    .footer-content p {
+        font-size: 0.9em;
+    }
+}

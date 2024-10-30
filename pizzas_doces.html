@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzas Doces - Juliano's Pizzaria</title>
+  <!-- Materialize CSS e Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- CSS específico para a página de Pizzas Doces -->
+  <link href="css/pizzas_doces.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h4><i class="fas fa-cookie-bite"></i> Pizzas Doces</h4>
+
+    <!-- Lista de Pizzas Doces com Botões para Tamanhos e Preços -->
+    <div class="pizza-item">
+      <div>
+        <h5>Brigadeiro</h5>
+        <p>Chocolate e granulado</p>
+        <div class="price-options">
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Brigadeiro - Broto', 35.00)">Broto - R$ 35,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Brigadeiro - Média', 45.00)">Média - R$ 45,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Brigadeiro - Grande', 57.00)">Grande - R$ 57,00</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-item">
+      <div>
+        <h5>Mista</h5>
+        <p>Chocolate preto e chocolate branco</p>
+        <div class="price-options">
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce Mista - Broto', 35.00)">Broto - R$ 35,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce Mista - Média', 45.00)">Média - R$ 45,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce Mista - Grande', 57.00)">Grande - R$ 57,00</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-item">
+      <div>
+        <h5>MMs</h5>
+        <p>Chocolate preto ou branco e confete</p>
+        <div class="price-options">
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de MMs - Broto', 35.00)">Broto - R$ 35,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de MMs - Média', 45.00)">Média - R$ 45,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de MMs - Grande', 57.00)">Grande - R$ 57,00</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-item">
+      <div>
+        <h5>Banana Especial</h5>
+        <p>Banana, chocolate branco e canela</p>
+        <div class="price-options">
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana Especial - Broto', 35.00)">Broto - R$ 35,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana Especial - Média', 45.00)">Média - R$ 45,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana Especial - Grande', 57.00)">Grande - R$ 57,00</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-item">
+      <div>
+        <h5>Banana com Canela</h5>
+        <p>Banana, mussarela e canela</p>
+        <div class="price-options">
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana com Canela - Broto', 35.00)">Broto - R$ 35,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana com Canela - Média', 45.00)">Média - R$ 45,00</button>
+          <button class="add-cart-btn" onclick="addToCart('Pizza doce de Banana com Canela - Grande', 57.00)">Grande - R$ 57,00</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Materialize JS e Script para funcionalidades do carrinho -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

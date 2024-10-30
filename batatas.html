@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porções de Batatas - Juliano's Pizzaria</title>
+  <!-- Materialize CSS e Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- CSS personalizado -->
+  <link href="css/batata.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Lista de Porções de Batatas -->
+  <div class="container">
+    <h4><i class="fas fa-french-fries"></i> Porções de Batatas</h4>
+
+    <div class="batata-item">
+      <div>
+        <h5>Batata Especial M (600g)</h5>
+        <p>Batata (congelada), queijo, bacon, catupiry ou cheddar</p>
+        <p>R$35.00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Batata Especial M (600g)', 35.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="batata-item">
+      <div>
+        <h5>Batata Especial G (800g)</h5>
+        <p>Batata (congelada), queijo, bacon, catupiry ou cheddar</p>
+        <p>R$45.00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Batata Especial G (800g)', 45.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="batata-item">
+      <div>
+        <h5>Batata Especial Família (1200g)</h5>
+        <p>Batata (congelada), queijo, bacon, catupiry ou cheddar</p>
+        <p>R$60.00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Batata Especial Família (1200g)', 60.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="batata-item">
+      <div>
+        <h5>Batata Individual (150g)</h5>
+        <p>Batata (congelada)</p>
+        <p>R$5.00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Batata Individual (150g)', 5.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <!-- Caixa com Informações de Preço -->
+    <div class="price-info-box">
+      <h5><i class="fas fa-tag"></i> Tamanhos e Preços das Porções de Batatas</h5>
+      <hr style="border-top: 2px solid #b71c1c; width: 50px; margin: 10px auto;">
+      <p class="price-description">
+        Aproveite as porções ideais para todos os tamanhos de fome!
+      </p>
+      <div class="price-list">
+        <p><strong>Batata Especial M:</strong> R$ 35,00 (600g)</p>
+        <p><strong>Batata Especial G:</strong> R$ 45,00 (800g)</p>
+        <p><strong>Batata Especial Família:</strong> R$ 60,00 (1200g)</p>
+        <p><strong>Batata Individual:</strong> R$ 5,00 (150g)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

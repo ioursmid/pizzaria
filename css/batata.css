@@ -1,0 +1,189 @@
+/* Estilos gerais */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do título */
+h4 {
+  color: #d35400; /* Cor de destaque dos lanches */
+  margin-top: 30px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  font-size: 1.8em;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Estilo para cada item de batata */
+.batata-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f3e7; /* Fundo claro */
+  border: 1px solid #d35400; /* Borda destacada */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.batata-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.batata-item h5 {
+  color: #d35400; /* Cor do título */
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.batata-item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #5d4037; /* Cor do texto */
+  max-width: 70%;
+}
+
+/* Botão para adicionar ao carrinho */
+.add-cart-btn {
+  background-color: #d35400; /* Cor do botão */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-grow: 1;
+}
+
+.add-cart-btn:hover {
+  background-color: #e67e22; /* Cor de hover do botão */
+  transform: scale(1.05);
+}
+
+/* Caixa de Informações de Preço */
+.price-info-box {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f9f3e7; /* Fundo claro */
+  border: 1px solid #d35400; /* Borda destacada */
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease;
+}
+
+.price-info-box h5 {
+  font-size: 1.8em;
+  color: #d35400; /* Cor do título */
+  font-weight: bold;
+}
+
+.price-description {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #5d4037;
+}
+
+.price-list p {
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+.price-list strong {
+  color: #d32f2f;
+}
+
+/* Modal do carrinho */
+#cart-modal .modal-content {
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#total-price {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* Botão de WhatsApp */
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebd5d;
+  transform: scale(1.05);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .batata-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .add-cart-btn {
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .price-info-box {
+      width: 90%;
+      margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h4 {
+      font-size: 1.5em;
+  }
+
+  .batata-item h5 {
+      font-size: 1.1em;
+  }
+
+  .add-cart-btn, .whatsapp-btn {
+      font-size: 0.9em;
+  }
+
+  .price-info-box h5 {
+      font-size: 1.5em;
+  }
+}

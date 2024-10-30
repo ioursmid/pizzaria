@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combos - Juliano's Pizzaria</title>
+  <!-- Materialize CSS e Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- CSS específico para a página de combos -->
+  <link href="css/combos.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h4><i class="fas fa-utensils"></i> Combos - Os Melhores Com Certeza !!</h4>
+
+    <!-- Lista de Combos com Botão Adicionar ao Carrinho -->
+    <div class="combo-item">
+      <div>
+        <h5>Barca Casal</h5>
+        <p>2 Unidades Burguer Carne Salada, 600g batata palito (congelada), bacon, cheddar ou requeijão</p>
+        <p>Preço: R$ 80,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Barca Casal', 80.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="combo-item">
+      <div>
+        <h5>Barca Solteiro</h5>
+        <p>1 Unidade Burguer Carne Salada, 300g batata palito (congelada), bacon, cheddar ou requeijão</p>
+        <p>Preço: R$ 40,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Barca Solteiro', 40.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="combo-item">
+      <div>
+        <h5>Tigrinho</h5>
+        <p>1 Burguer com: Pão Mônaco, hambúrguer, tomate, alface, cheddar</p>
+        <p>1 Coca lata 220ml</p>
+        <p>1 Batata individual - 150g batata palito (congelada)</p>
+        <p>Preço: R$ 25,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Tigrinho', 25.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="combo-item">
+      <div>
+        <h5>Combo da Casa</h5>
+        <p>4 Costela Bacon (sem alface, colocamos se quiser), 400g batata congelada, 200g bacon</p>
+        <p>Tudo mergulhado no molho cheddar</p>
+        <p>Preço: R$ 140,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Combo da Casa', 140.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="combo-item">
+      <div>
+        <h5>Super Combo</h5>
+        <p>2 X Tudo</p>
+        <p>2 Batata Individual</p>
+        <p>1 Coca-Cola 2 Litros Retornável</p>
+        <p>Preço: R$ 60,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Super Combo', 60.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="combo-item">
+      <div>
+        <h5>O Trio Perfeito</h5>
+        <p>1 X Tudo</p>
+        <p>1 Batata Individual</p>
+        <p>1 Coca-Cola 220ml</p>
+        <p>Taxa de entrega grátis!</p>
+        <p>Preço: R$ 30,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('O Trio Perfeito', 30.00)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+
+  <!-- jQuery, Materialize JS e Script para funcionalidades do carrinho -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script/script.js"></script> <!-- Inclua scripts específicos se necessário -->
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lanches Artesanais - Juliano's Pizzaria</title>
+  <!-- Materialize CSS e Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- CSS específico para a página de lanches artesanais -->
+  <link href="css/lanches_artesanais.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h4><i class="fas fa-hamburger"></i> Lanches Artesanais - Bonitos e Gostosos Como Devem Ser!</h4>
+
+    <!-- Lista de Lanches Artesanais com Botão Adicionar ao Carrinho -->
+    <div class="lanche-item">
+      <div>
+        <h5>Burguer Tudo</h5>
+        <p>Pão de brioche, alface, tomate, cebola roxa, hambúrguer artesanal, salsicha, presunto, mussarela, bacon, batata palha, ovo e requeijão</p>
+        <p>Preço: R$ 30,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Burguer Tudo', 30.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="lanche-item">
+      <div>
+        <h5>BBQ</h5>
+        <p>Pão brioche, bacon, hambúrguer artesanal, presunto, queijo mussarela, catupiry e maionese da casa</p>
+        <p>Preço: R$ 30,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de BBQ', 30.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="lanche-item">
+        <div>
+          <h5>Onions Rings</h5>
+          <p>Pão de brioche, hambúrguer artesanal, maionese da casa, alface, tomate, mussarela e maravilhosos onions rings e cebola roxa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Onions Rings', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Burguer Contrafilé</h5>
+          <p>Pão brioche, contra filé fatiado, queijo mussarela, alface, tomate, cebola roxa e molho da casa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Burguer Contrafilé', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Burguer da Casa</h5>
+          <p>Pão de brioche, hambúrguer artesanal, cheddar, cebola roxa, cream cheese, bacon e queijo mussarela</p>
+          <p>Preço: R$ 35,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Burguer da Casa', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Burguer Carne Salada</h5>
+          <p>Pão brioche, hambúrguer artesanal, catupiry, alface, tomate, cebola roxa, maionese verde</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Burguer Carne Salada', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Chiken Bacon</h5>
+          <p>Pão brioche, bacon, frango, alface, tomate, cebola roxa, queijo mussarela e molho da casa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Chiken Bacon', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Chiken Burguer</h5>
+          <p>Pão brioche, frango, alface, tomate, cebola roxa, queijo mussarela e molho da casa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Chiken Burguer', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Costela</h5>
+          <p>Pão brioche, hambúrguer de costela, 2x camadas de queijo, maionese verde, salada fresquinha de alface, tomate, cebola roxa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Costela', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Costela Bacon</h5>
+          <p>Pão brioche, hambúrguer de costela, 2x camadas de queijo, maionese verde, salada fresquinha de alface, tomate, cebola roxa e bacon</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Costela Bacon', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Cheddar Bacon</h5>
+          <p>Pão brioche, hambúrguer artesanal, cheddar fatiado, molho cheddar com bacon, alface, tomate, cebola roxa</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Cheddar Bacon', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Burguer Millionaire</h5>
+          <p>Pão de brioche, hambúrguer artesanal, queijo mussarela empanado na farinha Panko, bacon, alface e maionese da casa</p>
+          <p>Preço: R$ 35,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Burguer Millionaire', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Carne Queijo</h5>
+          <p>Pão brioche, hambúrguer artesanal, 3x queijo mussarela, tomate, maionese verde, cebola roxa, tomate, alface</p>
+          <p>Preço: R$ 30,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Carne Queijo', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Cheddar Duplo</h5>
+          <p>Pão brioche, 2x hambúrguer artesanal, cheddar fatiado, molho cheddar com bacon, alface, tomate, cebola roxa</p>
+          <p>Preço: R$ 35,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Cheddar Duplo', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="lanche-item">
+        <div>
+          <h5>Queijo Duplo</h5>
+          <p>Pão brioche, 2x hambúrguer artesanal, queijo mussarela, requeijão, bacon, alface, tomate, cebola roxa</p>
+          <p>Preço: R$ 35,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Lanche Artesanal de Queijo Duplo', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+
+    <h4><i class="fas fa-plus-circle"></i> Adicionais - Para um Lanche Completo!</h4>
+    
+    <!-- Lista de Adicionais com Botão Adicionar ao Carrinho -->
+    <div class="adicional-item">
+      <div>
+        <p>Bacon</p>
+        <p>R$ 3,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Adicional de Bacon', 3.00)">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="adicional-item">
+      <div>
+        <p>Queijo</p>
+        <p>R$ 3,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Adicional de Queijo', 3.00)">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="adicional-item">
+      <div>
+        <p>Catupiry</p>
+        <p>R$ 3,00</p>
+      </div>
+      <button class="add-cart-btn" onclick="addToCart('Adicional de Catupiry', 3.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="adicional-item">
+        <div>
+          <p>Cheddar</p>
+          <p>R$ 3,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Cheddar', 3.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Cream Cheese</p>
+          <p>R$ 3,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Cream Cheese', 3.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Hambúrguer Carne Bovina</p>
+          <p>R$ 8,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Hambúrguer Carne Bovina', 8.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Presunto</p>
+          <p>R$ 3,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Presunto', 3.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Salada (Tomate, Alface, Cebola)</p>
+          <p>R$ 3,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Salada', 3.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Molho da Casa</p>
+          <p>R$ 2,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Molho da Casa', 2.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Molho Verde</p>
+          <p>R$ 2,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Molho Verde', 2.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Picanha</p>
+          <p>R$ 8,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Picanha', 8.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Costela</p>
+          <p>R$ 8,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Costela', 8.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Onion Rings</p>
+          <p>R$ 5,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Onion Rings', 5.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="adicional-item">
+        <div>
+          <p>Frango Empanado</p>
+          <p>R$ 8,00</p>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Adicional de Frango Empanado', 8.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+  </div>
+
+  <!-- jQuery, Materialize JS e Script para funcionalidades do carrinho -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script/script.js"></script> <!-- Inclua scripts específicos se necessário -->
+</body>
+</html>
