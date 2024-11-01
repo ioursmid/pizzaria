@@ -86,7 +86,7 @@ function checkout() {
   });
 
   message += `Total: R$ ${total.toFixed(2)}`;
-  const whatsappNumber = '5517992845672';
+  const whatsappNumber = '5517999754390';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   
   window.open(whatsappUrl, '_blank');
