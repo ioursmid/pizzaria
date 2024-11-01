@@ -13,25 +13,19 @@ body {
     justify-content: space-between;
 }
 
-/* Navbar Transparente com Efeito de Rolagem */
+/* Navbar Transparente */
 .navbar {
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.9); /* 90% de transparência */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.brand-logo {
+.navbar .brand-logo {
     font-family: 'Dancing Script', cursive;
     color: #ffcc00 !important;
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Ícone do Carrinho */
 .cart-icon {
     position: relative;
     color: #ffcc00;
@@ -41,26 +35,70 @@ body {
     color: #ffdd66;
 }
 
-.cart-badge {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background-color: #ff6f00;
-    color: white;
-    border-radius: 50%;
-    padding: 4px 8px;
-    font-size: 0.8em;
-    font-weight: bold;
+/* Modal de Carrinho */
+.modal-content {
+    padding: 20px;
+    background-color: #fff5e1;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Título Principal */
-h2 {
-    font-family: 'Dancing Script', cursive;
+.modal-header {
+    border-bottom: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
     color: #d32f2f;
-    font-size: 2.5em;
-    text-align: center;
-    margin: 120px 0 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.modal-body {
+    font-size: 1.1em;
+}
+
+/* Estilo do Botão de Checkout */
+.btn-checkout {
+    background-color: #25D366;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #1ebd5d;
+    transform: scale(1.05);
+}
+
+/* Modal de Checkout */
+#checkout-modal .modal-content {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#checkout-modal .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+#checkout-modal .btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-modal .btn:hover {
+    background-color: #b71c1c;
 }
 
 /* Menu de Categorias */
@@ -76,10 +114,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 15px;
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -92,137 +130,19 @@ h2 {
 
 .menu-category a:hover {
     background-color: #ffebcd;
-    transform: scale(1.05);
+    transform: scale(1.1);
     color: #b71c1c;
 }
 
 .menu-category a i {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #d32f2f;
     margin-bottom: 5px;
 }
 
-/* Modal do Carrinho */
-.modal-content {
-    padding: 20px;
-    background-color: #fff5e1;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Itens do Carrinho */
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-}
-
-#cart-items li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    color: #5d4037;
-}
-
-#total-price {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 15px;
-    text-align: right;
-    color: #d32f2f;
-}
-
-.remove-btn {
-    color: #d32f2f;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-/* Botão WhatsApp */
-.whatsapp-btn {
-    background-color: #25D366;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-top: 15px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebd5d;
-}
-
-/* Modal de Checkout */
-#checkout-modal {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#checkout-modal .modal-content {
-    padding: 20px;
-    background-color: #ffffff;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-/* Campos do Modal de Checkout */
-#checkout-modal .input-field {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-#checkout-modal .input-field i.prefix {
-    margin-right: 8px;
-    font-size: 1.5em;
-    color: #d32f2f;
-}
-
-#checkout-modal label {
-    font-weight: bold;
-    color: #333;
-}
-
-#checkout-modal input,
-#checkout-modal select {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(100% - 40px);
-    font-size: 1em;
-    margin-left: 40px;
-}
-
-#checkout-modal .btn {
-    background-color: #d32f2f;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-#checkout-modal .btn:hover {
-    background-color: #b71c1c;
-}
-
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9); /* 90% de transparência */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -230,14 +150,17 @@ footer {
     margin-top: auto;
 }
 
-.footer-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 .footer-content p {
     margin: 5px 0;
     font-size: 1em;
+}
+
+.footer-content a {
+    color: #ffcc00;
+}
+
+.footer-content a:hover {
+    color: #ffdd66;
 }
 
 /* Responsividade */
@@ -247,47 +170,12 @@ footer {
     }
 
     .menu-category a {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         font-size: 0.9em;
     }
 
     .cart-icon i {
         font-size: 1.3em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    #checkout-modal .modal-content {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-category {
-        gap: 10px;
-    }
-
-    .menu-category a {
-        width: 90px;
-        height: 90px;
-    }
-
-    #checkout-modal .modal-content {
-        padding: 10px;
-    }
-
-    #checkout-modal .input-field i.prefix {
-        font-size: 1.2em;
-    }
-
-    #checkout-modal .btn {
-        font-size: 0.9em;
-    }
-
-    .footer-content p {
-        font-size: 0.9em;
     }
 }
