@@ -4,95 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bebidas - Juliano's Pizzaria</title>
-  <!-- Materialize CSS e Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS e Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- CSS específico para a página de bebidas -->
   <link href="css/bebidas.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <h4><i class="fas fa-wine-bottle"></i> Bebidas</h4>
-    
-        <!-- Lista de Bebidas com Botão Adicionar ao Carrinho -->
-        <div class="bebida-item">
-          <div>
-            <h5>Lata Coca Cola 220 ml</h5>
-            <p>Preço: R$ 3,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Lata Coca Cola 220 ml', 3.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Lata Coca Cola 350 ml</h5>
-            <p>Preço: R$ 5,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Lata Coca Cola 350 ml', 5.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Lata Guaraná Antarctica 350 ml</h5>
-            <p>Preço: R$ 5,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Lata Guaraná Antarctica 350 ml', 5.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Cotuba 2L</h5>
-            <p>Preço: R$ 8,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Cotuba 2L', 8.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Sukita Sabores</h5>
-            <p>Preço: R$ 8,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Sukita Sabores', 8.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Coca Cola 2L Retornável</h5>
-            <p>Preço: R$ 10,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Coca Cola 2L Retornável', 10.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Coca Cola 2L Pet</h5>
-            <p>Preço: R$ 15,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Coca Cola 2L Pet', 15.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Coca Cola 1L Retornável</h5>
-            <p>Preço: R$ 15,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Coca Cola 1L Retornável', 15.00)">Adicionar ao Carrinho</button>
-        </div>
-    
-        <div class="bebida-item">
-          <div>
-            <h5>Del Valle Laranja ou Uva 1.5L</h5>
-            <p>Preço: R$ 7,00</p>
-          </div>
-          <button class="add-cart-btn" onclick="addToCart('Del Valle Laranja ou Uva 1.5L', 7.00)">Adicionar ao Carrinho</button>
-        </div>
-    </div>
-    
+  <div class="container mt-5">
+    <h4><i class="fas fa-wine-bottle"></i> Bebidas</h4>
 
-  <!-- jQuery, Materialize JS e Script para funcionalidades do carrinho -->
+    <!-- Lista de Bebidas com Botão Adicionar ao Carrinho -->
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Lata Coca Cola 220 ml</h5>
+        <p>Preço: R$ 3,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Lata Coca Cola 220 ml', 3.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Lata Coca Cola 350 ml</h5>
+        <p>Preço: R$ 5,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Lata Coca Cola 350 ml', 5.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Lata Guaraná Antarctica 350 ml</h5>
+        <p>Preço: R$ 5,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Lata Guaraná Antarctica 350 ml', 5.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Cotuba 2L</h5>
+        <p>Preço: R$ 8,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Cotuba 2L', 8.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Sukita Sabores</h5>
+        <p>Preço: R$ 8,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Sukita Sabores', 8.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Coca Cola 2L Retornável</h5>
+        <p>Preço: R$ 10,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Coca Cola 2L Retornável', 10.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Coca Cola 2L Pet</h5>
+        <p>Preço: R$ 15,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Coca Cola 2L Pet', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Coca Cola 1L Retornável</h5>
+        <p>Preço: R$ 15,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Coca Cola 1L Retornável', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="bebida-item border p-3 my-3 d-flex justify-content-between align-items-center">
+      <div>
+        <h5>Del Valle Laranja ou Uva 1.5L</h5>
+        <p>Preço: R$ 7,00</p>
+      </div>
+      <button class="btn btn-primary" onclick="addToCart('Del Valle Laranja ou Uva 1.5L', 7.00)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="script/script.js"></script> <!-- Inclua scripts específicos se necessário -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>

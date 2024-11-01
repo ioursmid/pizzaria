@@ -1,46 +1,91 @@
 /* Estilo para a página de Hot Dog */
 .container {
-    margin-top: 20px;
-  }
-  
-  h4 {
-    color: #d35400; /* Cor de destaque para o título */
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+/* Título */
+h4 {
+  color: #b71c1c; /* Vermelho vinho para destaque */
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Hot Dog Item */
+.hotdog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #b71c1c; /* Borda vermelho vinho */
+  border-radius: 8px;
+  background-color: #fdfaf5; /* Fundo leve e refinado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotdog-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hotdog-item h5 {
+  color: #b71c1c; /* Cor refinada */
+  font-weight: bold;
+  margin: 0 0 5px;
+  font-size: 1.2em;
+}
+
+.hotdog-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Botão de Adicionar ao Carrinho */
+.add-cart-btn {
+  background-color: #b71c1c; /* Cor refinada */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #a83d3d; /* Tom mais claro no hover */
+  transform: scale(1.05);
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
   .hotdog-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #d35400; /* Borda destacada */
-    border-radius: 8px;
-    background-color: #f9f3e7; /* Fundo claro */
+      flex-direction: column;
+      text-align: center;
   }
-  
-  .hotdog-item h5 {
-    color: #d35400;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .hotdog-item p {
-    margin: 0;
-  }
-  
+
   .add-cart-btn {
-    background-color: #d35400; /* Cor do botão */
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
   }
-  
-  .add-cart-btn:hover {
-    background-color: #e67e22; /* Cor de hover do botão */
+}
+
+@media (max-width: 480px) {
+  h4 {
+      font-size: 1.5em;
   }
-  
+
+  .hotdog-item h5 {
+      font-size: 1.1em;
+  }
+
+  .add-cart-btn {
+      font-size: 0.9em;
+  }
+}

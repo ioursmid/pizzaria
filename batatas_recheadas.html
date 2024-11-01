@@ -4,77 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Batatas Recheadas - Juliano's Pizzaria</title>
-  <!-- Materialize CSS e Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS e Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- CSS específico para a página de batatas recheadas -->
   <link href="css/batatas_recheadas.css" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
+  <div class="container mt-5">
     <h4><i class="fas fa-potato"></i> Batatas Recheadas</h4>
 
     <!-- Lista de Batatas Recheadas com Botão Adicionar ao Carrinho -->
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Frango</h5>
         <p>Purê de batata, filé de frango, bacon, milho, tomate, catupiry, mussarela, batata palha</p>
         <p>Preço: R$ 27,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Frango', 27.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Frango', 27.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Calabresa</h5>
         <p>Purê de batata, calabresa, bacon, milho, tomate, catupiry, mussarela, batata palha</p>
         <p>Preço: R$ 27,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Calabresa', 27.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Calabresa', 27.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Bacon</h5>
         <p>Purê de batata, bacon, milho, tomate, catupiry, mussarela, presunto, batata palha</p>
         <p>Preço: R$ 27,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Bacon', 27.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Bacon', 27.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Presunto e Queijo</h5>
         <p>Purê de batata, presunto, catupiry, mussarela, batata palha</p>
         <p>Preço: R$ 27,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Presunto e Queijo', 27.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Presunto e Queijo', 27.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Picanha</h5>
         <p>Purê de batata, picanha fatiada, bacon, milho, tomate, catupiry, mussarela, presunto, batata palha</p>
         <p>Preço: R$ 30,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Picanha', 30.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Picanha', 30.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="batata-item">
+    <div class="batata-item border p-3 my-3">
       <div>
         <h5>Moda da Casa</h5>
         <p>Purê de batata, filé de frango, bacon, milho, tomate, catupiry, mussarela, presunto, carne, calabresa, batata palha</p>
         <p>Preço: R$ 35,00</p>
       </div>
-      <button class="add-cart-btn" onclick="addToCart('Batata recheada Moda da Casa', 35.00)">Adicionar ao Carrinho</button>
+      <button class="btn btn-primary" onclick="addToCart('Batata recheada Moda da Casa', 35.00)">Adicionar ao Carrinho</button>
     </div>
 
   </div>
 
-  <!-- jQuery, Materialize JS e Script para funcionalidades do carrinho -->
+  <!-- jQuery, Bootstrap JS e Script para funcionalidades do carrinho -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <script src="script/script.js"></script> <!-- Inclua scripts específicos se necessário -->
 </body>
 </html>

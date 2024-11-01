@@ -1,15 +1,15 @@
 /* Estilos Gerais */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fafafa;
-    color: #333;
+    background-color: #f7f4ef; /* Tom creme suave */
+    color: #3e3e3e;
     margin: 0;
     padding: 0;
 }
 
 /* Título */
 h4 {
-    color: #b71c1c;
+    color: #8b1a1a; /* Vermelho vinho */
     margin-top: 30px;
     font-family: 'Roboto Slab', serif;
     text-align: center;
@@ -29,14 +29,14 @@ h4 {
     }
 }
 
-/* Estilo para cada item de borda */
+/* Estilo para cada item */
 .borda-item, .pizza-item, .lanche-item, .adicional-item {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #f9f3e7; /* Fundo claro similar ao dos lanches */
-    border: 1px solid #d35400; /* Borda destacada */
+    background-color: #fdfaf5; /* Fundo leve e elegante */
+    border: 1px solid #8b1a1a; /* Borda vermelho vinho */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     justify-content: space-between;
@@ -46,27 +46,28 @@ h4 {
 
 .borda-item:hover, .pizza-item:hover, .lanche-item:hover, .adicional-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .borda-item h5, .pizza-item h5, .lanche-item h5, .adicional-item h5 {
-    color: #d35400; /* Cor de destaque */
-    font-size: 1.2em;
+    color: #8b1a1a; /* Destaque para títulos */
+    font-size: 1.3em;
     margin: 0;
+    font-weight: bold;
 }
 
 .borda-item p, .pizza-item p, .lanche-item p, .adicional-item p {
     margin: 0;
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.95em;
+    color: #4d4d4d; /* Texto mais suave */
 }
 
 /* Botão para adicionar ao carrinho */
 .add-cart-btn {
-    background-color: #d35400; /* Cor do botão similar ao padrão dos lanches */
+    background-color: #8b1a1a; /* Vermelho vinho */
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: 0.9em;
     cursor: pointer;
@@ -74,7 +75,7 @@ h4 {
 }
 
 .add-cart-btn:hover {
-    background-color: #e67e22; /* Cor de hover do botão */
+    background-color: #a83d3d; /* Tom mais claro para hover */
     transform: scale(1.05);
 }
 
@@ -98,7 +99,7 @@ h4 {
     }
 
     .borda-item h5, .pizza-item h5, .lanche-item h5, .adicional-item h5 {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     .add-cart-btn {

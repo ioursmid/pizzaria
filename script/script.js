@@ -4,8 +4,6 @@ function loadCategory(page) {
 }
 
 $(document).ready(function() {
-  $('.modal').modal();
-  $('select').formSelect();
   updateCartBadge(); // Atualiza o badge ao carregar a página
 
   // Mostrar campo de troco quando "Dinheiro" for selecionado
@@ -24,7 +22,7 @@ var cart = cart || [];
 // Função para adicionar itens ao carrinho
 function addToCart(item, price) {
   cart.push({ item, price });
-  M.toast({ html: `${item} adicionado ao carrinho!` });
+  alert(`${item} adicionado ao carrinho!`); // Notificação substituída
   updateCartModal();
   updateCartBadge();
 }
@@ -63,7 +61,7 @@ function removeFromCart(index) {
   cart.splice(index, 1);
   updateCartModal();
   updateCartBadge();
-  M.toast({ html: 'Item removido do carrinho!' });
+  alert('Item removido do carrinho!'); // Notificação substituída
 }
 
 // Atualiza o badge do carrinho
@@ -77,16 +75,16 @@ function updateCartBadge() {
 // Abre o modal do carrinho
 function openCart() {
   updateCartModal();
-  $('#cart-modal').modal('open');
+  new bootstrap.Modal(document.getElementById('cart-modal')).show(); // Substitui .modal('open')
 }
 
 // Abre o modal de checkout para inserir endereço e forma de pagamento
 function openCheckoutForm() {
   if (cart.length === 0) {
-    M.toast({ html: 'Seu carrinho está vazio!' });
+    alert('Seu carrinho está vazio!'); // Notificação substituída
     return;
   }
-  $('#checkout-modal').modal('open');
+  new bootstrap.Modal(document.getElementById('checkout-modal')).show(); // Substitui .modal('open')
 }
 
 // Finaliza o pedido e redireciona para o WhatsApp
@@ -100,7 +98,7 @@ function finalizeOrder() {
 
   // Validação dos campos obrigatórios
   if (!rua || !numero || !bairro || !pagamento) {
-    M.toast({ html: 'Por favor, preencha todos os campos obrigatórios.' });
+    alert('Por favor, preencha todos os campos obrigatórios.'); // Notificação substituída
     return;
   }
 
@@ -124,9 +122,9 @@ function finalizeOrder() {
 
   // Redireciona para o WhatsApp com a mensagem
   window.open(whatsappUrl, '_blank');
-  $('#checkout-modal').modal('close');
-  
-  // Limpa o carrinho e atualiza
+
+  // Fecha o modal de checkout e limpa o carrinho
+  bootstrap.Modal.getInstance(document.getElementById('checkout-modal')).hide();
   cart = [];
   updateCartModal();
   updateCartBadge();

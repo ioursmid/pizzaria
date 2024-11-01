@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzas - Juliano's Pizzaria</title>
-  <!-- Materialize CSS e Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS e Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- CSS específico para a página de pizzas -->
   <link href="css/pizza.css" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- Lista de Pizzas -->
-  <div class="container">
+
+  <div class="container my-5">
     <h4><i class="fas fa-pizza-slice"></i> Pizzas</h4>
 
-    <!-- Exemplo de Pizza com Botões para Tamanhos e Preços -->
-    <div class="pizza-item">
+    <!-- Lista de Pizzas -->
+    <div class="pizza-item border p-3 my-3">
       <div>
         <h5>A Moda</h5>
         <p>Molho, cebola, presunto, milho, ervilha fresca, palmito pupunha, tomate, calabresa, bacon, catupiry, azeitona e orégano</p>
-        <div class="price-options">
+        <div class="price-options d-flex flex-wrap gap-2">
           <button class="add-cart-btn" onclick="addToCart('Pizza A Moda - Broto', 35.00)">Broto - R$ 35,00</button>
           <button class="add-cart-btn" onclick="addToCart('Pizza A Moda - Média', 45.00)">Média - R$ 45,00</button>
           <button class="add-cart-btn" onclick="addToCart('Pizza A Moda - Grande', 57.00)">Grande - R$ 57,00</button>
@@ -29,11 +28,12 @@
       </div>
     </div>
 
-    <div class="pizza-item">
+    <!-- Repetição de Itens de Pizza para Outras Opções -->
+    <div class="pizza-item border p-3 my-3">
       <div>
         <h5>Portuguesa</h5>
         <p>Molho, presunto, mussarela, catupiry, ovo, milho, palmito, calabresa, azeitona e orégano</p>
-        <div class="price-options">
+        <div class="price-options d-flex flex-wrap gap-2">
           <button class="add-cart-btn" onclick="addToCart('Pizza de Portuguesa - Broto', 35.00)">Broto - R$ 35,00</button>
           <button class="add-cart-btn" onclick="addToCart('Pizza de Portuguesa - Média', 45.00)">Média - R$ 45,00</button>
           <button class="add-cart-btn" onclick="addToCart('Pizza de Portuguesa - Grande', 57.00)">Grande - R$ 57,00</button>
@@ -41,336 +41,8 @@
       </div>
     </div>
 
-    <!-- Outras Pizzas -->
-    <div class="pizza-item">
-      <div>
-        <h5>Frango Catupiry</h5>
-        <p>Molho, frango desfiado, catupiry, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Catupiry - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Catupiry - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Catupiry - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Calabresa</h5>
-        <p>Molho, mussarela, calabresa fatiada, cebola, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calabresa - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calabresa - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calabresa - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Adicione o restante das pizzas seguindo o mesmo padrão -->
-    <!-- Exemplos adicionais -->
-    <div class="pizza-item">
-      <div>
-        <h5>Brócolis</h5>
-        <p>Molho, brócolis, mussarela, catupiry, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Brócolis - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Brócolis - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Brócolis - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Quatro Queijos</h5>
-        <p>Molho, mussarela, catupiry, provolone, parmesão, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Quatro Queijos - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Quatro Queijos - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Quatro Queijos - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Palmito</h5>
-        <p>Molho, palmito, mussarela, catupiry, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Palmito - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Palmito - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Palmito - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="pizza-item">
-      <div>
-        <h5>Bacon</h5>
-        <p>Molho, mussarela, catupiry, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Bacon - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Bacon - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Bacon - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="pizza-item">
-      <div>
-        <h5>Marguerita</h5>
-        <p>Molho, mussarela, tomate, parmesão, manjericão, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Marguerita - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Marguerita - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Marguerita - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="pizza-item">
-      <div>
-        <h5>Toscana</h5>
-        <p>Molho, mussarela, calabresa moída, cheddar, cebola, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Toscana - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Toscana - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Toscana - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Alho e Óleo</h5>
-        <p>Molho, mussarela, catupiry, alho frito, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Alho e Óleo - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Alho e Óleo - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Alho e Óleo - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Baiana</h5>
-        <p>Molho, calabresa moída, mussarela, catupiry, cebola, pimenta, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza Baiana - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza Baiana - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza Baiana - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Lombo Canadense</h5>
-        <p>Molho, lombo, mussarela, catupiry, cebola, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Lombo Canadense - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Lombo Canadense - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Lombo Canadense - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Italiana</h5>
-        <p>Molho, brócolis, palmito, milho, mussarela, catupiry, cebola, bacon, alho frito, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Italiana - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Italiana - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Italiana - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Presunto e Mussarela</h5>
-        <p>Molho, presunto, mussarela, catupiry, tomate, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto e Mussarela - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto e Mussarela - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto e Mussarela - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Presunto Especial</h5>
-        <p>Molho, presunto, mussarela, catupiry, tomate, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto Especial - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto Especial - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Presunto Especial - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Calafrango</h5>
-        <p>Molho, calabresa, frango, mussarela, cebola, catupiry, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calafrango - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calafrango - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Calafrango - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Azeitona</h5>
-        <p>Molho, mussarela, azeitona fatiada, requeijão e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Azeitona - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Azeitona - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Azeitona - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Atum Especial</h5>
-        <p>Molho, atum, mussarela, catupiry, cebola, tomate, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Atum Especial - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Atum Especial - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Atum Especial - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Caipira</h5>
-        <p>Molho, frango, milho, mussarela, catupiry, cebola, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Caipira - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Caipira - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Caipira - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Frango Crocante</h5>
-        <p>Molho, frango desfiado, mussarela, catupiry, batata palha, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Crocante - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Crocante - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Crocante - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Cinco Queijos</h5>
-        <p>Molho, mussarela, catupiry, cheddar, provolone, parmesão, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Cinco Queijos - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Cinco Queijos - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Cinco Queijos - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Frango Cheddar</h5>
-        <p>Molho, frango desfiado, mussarela, cheddar, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Cheddar - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Cheddar - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Frango Cheddar - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Vegetariana</h5>
-        <p>Molho, brócolis, palmito, milho, ervilha, tomate, cebola, catupiry, mussarela, parmesão, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Vegetariana - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Vegetariana - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Vegetariana - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Milho Verde</h5>
-        <p>Molho, milho, mussarela, catupiry, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Milho Verde - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Milho Verde - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Milho Verde - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Pão de Alho</h5>
-        <p>Molho de tomate, pão de alho, mussarela, requeijão, orégano e azeitona</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Pão de Alho - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Pão de Alho - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Pão de Alho - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>LBB</h5>
-        <p>Molho, mussarela, lombo, banana, bacon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de LBB - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de LBB - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de LBB - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Strogonoff de Frango</h5>
-        <p>Molho, strogonoff de frango, mussarela, batata palha, champignon, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Frango - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Frango - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Frango - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="pizza-item">
-      <div>
-        <h5>Strogonoff de Carne</h5>
-        <p>Molho, strogonoff de carne, mussarela, batata palha, azeitona e orégano</p>
-        <div class="price-options">
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Carne - Broto', 35.00)">Broto - R$ 35,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Carne - Média', 45.00)">Média - R$ 45,00</button>
-          <button class="add-cart-btn" onclick="addToCart('Pizza de Strogonoff de Carne - Grande', 57.00)">Grande - R$ 57,00</button>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Caixa com Informações de Preço -->
-    <div class="price-info-box">
+    <!-- Informações sobre os Tamanhos e Preços -->
+    <div class="price-info-box border p-3 my-5 text-center">
       <h5><i class="fas fa-tag"></i> Tamanhos e Preços das Pizzas</h5>
       <p><strong>Broto:</strong> R$ 35,00 (Ideal para 1 pessoa)</p>
       <p><strong>Média:</strong> R$ 45,00 (Serve até 2 pessoas)</p>
@@ -380,7 +52,8 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="script/script.js"></script> <!-- Inclua scripts específicos se necessário -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>

@@ -1,46 +1,92 @@
-/* Estilo para a página de Lanches Artesanais */
+/* Estilo para a Página de Lanches Artesanais */
 .container {
-    margin-top: 20px;
-  }
-  
-  h4 {
-    color: #d35400; /* Cor de destaque para o título */
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+/* Título */
+h4 {
+  color: #b71c1c; /* Cor de destaque vermelho vinho */
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Estilos para Lanche e Adicional */
+.lanche-item, .adicional-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #b71c1c; /* Borda em vermelho vinho */
+  border-radius: 8px;
+  background-color: #fdfaf5; /* Fundo leve e refinado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lanche-item:hover, .adicional-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos e Descrições */
+.lanche-item h5, .adicional-item p {
+  color: #b71c1c; /* Cor refinada para título e descrição */
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.lanche-item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Botão Adicionar ao Carrinho */
+.add-cart-btn {
+  background-color: #b71c1c; /* Vermelho refinado */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #a83d3d; /* Tom mais claro no hover */
+  transform: scale(1.05);
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 768px) {
   .lanche-item, .adicional-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #d35400; /* Borda destacada */
-    border-radius: 8px;
-    background-color: #f9f3e7; /* Fundo claro */
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .lanche-item h5, .adicional-item p {
-    color: #d35400;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .lanche-item p {
-    margin: 0;
-  }
-  
+
   .add-cart-btn {
-    background-color: #d35400; /* Cor do botão */
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  .add-cart-btn:hover {
-    background-color: #e67e22; /* Cor de hover do botão */
+}
+
+@media (max-width: 480px) {
+  h4 {
+    font-size: 1.5em;
   }
-  
+
+  .lanche-item h5, .adicional-item p {
+    font-size: 1em;
+  }
+
+  .add-cart-btn {
+    font-size: 0.9em;
+  }
+}

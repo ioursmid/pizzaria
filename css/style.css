@@ -1,4 +1,4 @@
-/* Estilos de Background */
+/* Estilos Gerais */
 body {
     font-family: 'Montserrat', sans-serif;
     background: url('../img/background.jpg') no-repeat center center fixed;
@@ -14,28 +14,19 @@ body {
 }
 
 /* Navbar Transparente com Efeito de Rolagem */
-.nav-wrapper {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+.navbar {
+    background-color: transparent;
     transition: background-color 0.3s ease;
+    box-shadow: none;
 }
 
-.nav-wrapper:hover,
-.nav-wrapper.scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Logo da Marca */
 .brand-logo {
     font-family: 'Dancing Script', cursive;
-    color: #ffcc00;
+    color: #ffcc00 !important;
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -44,18 +35,12 @@ body {
 .cart-icon {
     position: relative;
     color: #ffcc00;
-    transition: color 0.3s;
 }
 
 .cart-icon:hover {
     color: #ffdd66;
 }
 
-.cart-icon i {
-    font-size: 1.5em;
-}
-
-/* Badge do Carrinho */
 .cart-badge {
     position: absolute;
     top: -8px;
@@ -79,13 +64,11 @@ h2 {
 }
 
 /* Menu de Categorias */
-.menu-category {
+.menu-category .col {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    max-width: 1200px;
+    align-items: center;
+    padding: 10px;
 }
 
 .menu-category a {
@@ -93,8 +76,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background-color: #ffffff;
     border-radius: 12px;
     font-size: 1em;
@@ -114,13 +97,13 @@ h2 {
 }
 
 .menu-category a i {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #d32f2f;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 /* Modal do Carrinho */
-#cart-modal .modal-content {
+.modal-content {
     padding: 20px;
     background-color: #fff5e1;
     color: #333;
@@ -128,6 +111,7 @@ h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Itens do Carrinho */
 #cart-items {
     list-style-type: none;
     padding: 0;
@@ -149,7 +133,6 @@ h2 {
     color: #d32f2f;
 }
 
-/* Botão Remover do Carrinho */
 .remove-btn {
     color: #d32f2f;
     cursor: pointer;
@@ -176,14 +159,23 @@ h2 {
 }
 
 /* Modal de Checkout */
+#checkout-modal {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 #checkout-modal .modal-content {
     padding: 20px;
     background-color: #ffffff;
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
+/* Campos do Modal de Checkout */
 #checkout-modal .input-field {
     margin-bottom: 20px;
     display: flex;
@@ -206,7 +198,9 @@ h2 {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    width: 100%;
+    width: calc(100% - 40px);
+    font-size: 1em;
+    margin-left: 40px;
 }
 
 #checkout-modal .btn {
@@ -224,11 +218,6 @@ h2 {
 
 #checkout-modal .btn:hover {
     background-color: #b71c1c;
-}
-
-/* Campo de Troco */
-#troco-container {
-    display: none;
 }
 
 /* Footer */
@@ -249,40 +238,6 @@ footer {
 .footer-content p {
     margin: 5px 0;
     font-size: 1em;
-}
-
-.developer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.developer a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.developer a:hover {
-    color: #ffdd66;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ffcc00;
 }
 
 /* Responsividade */
