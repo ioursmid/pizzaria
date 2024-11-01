@@ -5,7 +5,17 @@ function loadCategory(page) {
 
 $(document).ready(function() {
   $('.modal').modal();
+  $('select').formSelect();
   updateCartBadge(); // Atualiza o badge ao carregar a página
+
+  // Mostrar campo de troco quando "Dinheiro" for selecionado
+  $('#pagamento').change(function() {
+    if ($(this).val() === 'Dinheiro') {
+      $('#troco-container').show();
+    } else {
+      $('#troco-container').hide();
+    }
+  });
 });
 
 // Inicializa o carrinho se ele ainda não estiver definido
@@ -42,12 +52,12 @@ function updateCartModal() {
 // Função de carregamento da categoria com rolagem suave até o início dos itens
 function loadCategory(url) {
   $("#category-content").load(url, function() {
-    // Após o carregamento do conteúdo, rola a página até o início dos itens
     $('html, body').animate({
-      scrollTop: $("#category-content").offset().top - 100  // Ajuste para posicionar melhor os itens
-    }, 700);  // Aumentei o tempo da animação para uma rolagem mais suave
+      scrollTop: $("#category-content").offset().top - 100
+    }, 700);
   });
 }
+
 // Remove itens do carrinho
 function removeFromCart(index) {
   cart.splice(index, 1);
@@ -70,24 +80,54 @@ function openCart() {
   $('#cart-modal').modal('open');
 }
 
-// Finaliza o pedido e redireciona para o WhatsApp
-function checkout() {
+// Abre o modal de checkout para inserir endereço e forma de pagamento
+function openCheckoutForm() {
   if (cart.length === 0) {
     M.toast({ html: 'Seu carrinho está vazio!' });
     return;
   }
+  $('#checkout-modal').modal('open');
+}
 
-  let message = 'Olá, gostaria de fazer o seguinte pedido:';
+// Finaliza o pedido e redireciona para o WhatsApp
+function finalizeOrder() {
+  const rua = document.getElementById('rua').value;
+  const numero = document.getElementById('numero').value;
+  const bairro = document.getElementById('bairro').value;
+  const referencia = document.getElementById('referencia').value;
+  const pagamento = document.getElementById('pagamento').value;
+  const troco = pagamento === 'Dinheiro' ? document.getElementById('troco').value : null;
+
+  // Validação dos campos obrigatórios
+  if (!rua || !numero || !bairro || !pagamento) {
+    M.toast({ html: 'Por favor, preencha todos os campos obrigatórios.' });
+    return;
+  }
+
+  let message = `Olá, gostaria de fazer o seguinte pedido:\n\n`;
   let total = 0;
 
   cart.forEach(cartItem => {
-    message += `- ${cartItem.item} - R$ ${cartItem.price.toFixed(2)}`;
+    message += `- ${cartItem.item} - R$ ${cartItem.price.toFixed(2)}\n`;
     total += cartItem.price;
   });
 
-  message += `Total: R$ ${total.toFixed(2)}`;
+  // Detalhes do pedido e endereço
+  message += `\nTotal: R$ ${total.toFixed(2)}\n`;
+  message += `Endereço: Rua ${rua}, Nº ${numero}, Bairro ${bairro}\n`;
+  if (referencia) message += `Referência: ${referencia}\n`;
+  message += `Forma de pagamento: ${pagamento}\n`;
+  if (troco) message += `Troco para: R$ ${parseFloat(troco).toFixed(2)}\n`;
+
   const whatsappNumber = '5517999754390';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  
+
+  // Redireciona para o WhatsApp com a mensagem
   window.open(whatsappUrl, '_blank');
+  $('#checkout-modal').modal('close');
+  
+  // Limpa o carrinho e atualiza
+  cart = [];
+  updateCartModal();
+  updateCartBadge();
 }

@@ -30,9 +30,70 @@
       <h5>Carrinho de Compras</h5>
       <ul id="cart-items"></ul>
       <p id="total-price">Total: R$ 0,00</p>
-      <button class="whatsapp-btn" onclick="checkout()">Fazer Pedido</button>
+      <button class="whatsapp-btn" onclick="openCheckoutForm()">Fazer Pedido</button>
     </div>
   </div>
+
+  <!-- Modal de Checkout com formulário -->
+  <div id="checkout-modal" class="modal">
+    <div class="modal-content">
+      <h5>Informações de Entrega</h5>
+      
+      <!-- Campo Rua -->
+      <div class="input-field">
+        <i class="fas fa-road prefix"></i>
+        <input id="rua" type="text" required>
+        <label for="rua">Rua</label>
+      </div>
+
+      <!-- Campo Número -->
+      <div class="input-field">
+        <i class="fas fa-home prefix"></i>
+        <input id="numero" type="text" required>
+        <label for="numero">Número</label>
+      </div>
+
+      <!-- Campo Bairro -->
+      <div class="input-field">
+        <i class="fas fa-city prefix"></i>
+        <input id="bairro" type="text" required>
+        <label for="bairro">Bairro</label>
+      </div>
+
+      <!-- Campo Referência -->
+      <div class="input-field">
+        <i class="fas fa-map-marker-alt prefix"></i>
+        <input id="referencia" type="text">
+        <label for="referencia">Ponto de Referência</label>
+      </div>
+
+      <!-- Campo Forma de Pagamento -->
+      <div class="input-field">
+        <i class="fas fa-money-bill-wave prefix"></i>
+        <select id="pagamento" required>
+          <option value="" disabled selected>Escolha a forma de pagamento</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Pix">Pix</option>
+          <option value="Cartão de Crédito">Cartão de Crédito</option>
+          <option value="Cartão de Débito">Cartão de Débito</option>
+        </select>
+        <label>Forma de Pagamento</label>
+      </div>
+
+      <!-- Campo de Troco (Exibido Condicionalmente) -->
+      <div class="input-field" id="troco-container" style="display: none;">
+        <i class="fas fa-coins prefix"></i>
+        <input id="troco" type="number" placeholder="Informe o valor do troco">
+        <label for="troco">Necessita Troco Para</label>
+      </div>
+
+      <!-- Botão de Enviar Pedido -->
+      <button onclick="finalizeOrder()" class="btn btn-large waves-effect">Enviar Pedido</button>
+    </div>
+  </div>
+
+
+
 
   <!-- Seção de Cardápio -->
   <section class="menu-section" id="menu-section">
@@ -80,4 +141,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script/script.js"></script>
-  <script>
+</body>
+</html>
